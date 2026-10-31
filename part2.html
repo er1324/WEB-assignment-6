@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li><a href="index.html" class="nav-link">Part 1</a></li>
+            <li><a href="part2.html" class="nav-link active">Part 2</a></li>
+            <li><a href="part3.html" class="nav-link">Part 3</a></li>
+            <li><a href="part4.html" class="nav-link">Part 4</a></li>
+            <li><a href="part5.html" class="nav-link">Part 5</a></li>
+        </ul>
+    </nav>
+
+    <h3>Visibility Methods</h3>
+    <p id="target-paragraph">This paragraph will hide, show, or toggle visibility.</p>
+    <button id="btn-hide">Hide</button>
+    <button id="btn-show">Show</button>
+    <button id="btn-toggle-vis">Toggle</button>
+
+    <br><br>
+    <h3>Fade Methods</h3>
+    <img id="target-img" src="images/fade.png"><br>
+    <button id="btn-fade-in">Fade In</button>
+    <button id="btn-fade-out">Fade Out</button>
+    <button id="btn-fade-toggle">Fade Toggle</button>
+
+    <br><br>
+    <h3>Slide Methods</h3>
+    <button id="btn-slide-up">Slide Up</button>
+    <button id="btn-slide-down">Slide Down</button>
+    <button id="btn-slide-toggle">Slide Toggle</button><br><br>
+    <div id="slide-panel" style="background: #eeeeee; padding: 10px; border: 1px solid #cccccc; width: 300px;">
+        This collapsible panel slides up, down, or toggles using jQuery.
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#btn-hide").click(function() { $("#target-paragraph").hide(); });
+            $("#btn-show").click(function() { $("#target-paragraph").show(); });
+            $("#btn-toggle-vis").click(function() { $("#target-paragraph").toggle(); });
+
+            $("#btn-fade-out").click(function() { $("#target-img").fadeOut(); });
+            $("#btn-fade-in").click(function() { $("#target-img").fadeIn(); });
+            $("#btn-fade-toggle").click(function() { $("#target-img").fadeToggle(); });
+
+            $("#btn-slide-up").click(function() { $("#slide-panel").slideUp(); });
+            $("#btn-slide-down").click(function() { $("#slide-panel").slideDown(); });
+            $("#btn-slide-toggle").click(function() { $("#slide-panel").slideToggle(); });
+        });
+    </script>
+</body>
+</html>
